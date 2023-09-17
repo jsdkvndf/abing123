@@ -19,10 +19,6 @@
         <p style="font-size:24px;color:#555;" id="iconText">正在检测...</p>
         <p style="color:#999;" id="subText"></p>
     </div>
-
-    <div class="actions" id="goHome">
-        <a href="{longurl}" class="weui-btn weui-btn_primary" id="{rid}">点击前往</a>
-    </div>
     <div class="footer">
         <p>电脑管家为您护航</p>
         <p>Copyright © 1998 - 2023. All Rights Reserved.</p>
@@ -95,7 +91,7 @@
             var subText = document.getElementById('subText');
             icon.classList.add("weui-icon-success");
             iconText.innerHTML = "已通过安全检测";
-            subText.innerHTML = "如果没有自动跳转，请点击下方按钮前往";
+            subText.innerHTML = "加载中,请稍等...";
         }, 1000);
     </script>
 </body>
